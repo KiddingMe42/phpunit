@@ -1,0 +1,49 @@
+#-----------------------------------------------------------------
+
+# PHPUNIT :
+
+## php.ini : 
+- decommenter ligne : 
+	extension=php_mbstring.dll
+	extension=php_openssl.dll
+ 	extension_dir="ext" // pour windows
+
+## Composer : 
+- installer phpunit
+	composer init
+	require-dev (uniquement)
+	"phpunit/phpunit"
+	composer install
+
+#-----------------------------------------------------------------
+
+# EXECUTER PHPUNIT :
+
+## Source :
+https://phpunit.de/getting-started-with-phpunit.html
+
+## TestDox (rendu visuel)
+phpunit --bootstrap vendor/autoload.php --testdox tests
+
+## Executer la section nommee "money" du fichier phpunit.xml :
+phpunit -c phpunit.xml --testsuite money
+
+## Test execution
+phpunit --bootstrap vendor/autoload.php tests/EmailTest
+
+#-----------------------------------------------------------------
+
+# GENERER LE COVERAGE (=visuel de stat) :
+Source : https://phpunit.de/manual/current/en/code-coverage-analysis.html
+Commande pour générer les fichiers html (statistique) :
+phpunit --coverage-html coverage
+
+#-----------------------------------------------------------------
+
+# INSTALLER PHPUNIT SUR WINDOWS :
+Créer fichier phpunit.cmd, avec comme contenu
+@php "%~dp0phpunit-6.4.4.phar" %*
+Sauver
+Double cliquer sur le fichier phpunit.cmd
+
+#-----------------------------------------------------------------
