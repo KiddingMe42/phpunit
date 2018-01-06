@@ -11,9 +11,15 @@
     ],
     "require": {},
     "autoload-dev": {
-        "psr-4": { "Eewee\\": "src/", "App\\Acme\\": "src/" }
+        "psr-4": { 
+            "Eewee\\": "src/",
+            "App\\Acme\\": "src/"
+        }
     },
     "autoload": {
-        "psr-4": { "Eewee\\": "src/", "App\\Acme\\": "src/" }
+        "psr-4": { 
+            "Eewee\\": "src/",
+            "App\\Acme\\": "src/"
+        }
     }
 }
