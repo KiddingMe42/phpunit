@@ -22,11 +22,13 @@ class ProductTest extends TestCase
      * @covers \AppBundle\Entity\Product::computeTVA
      * @group michael
      */
+    /*
     public function testcomputeTvaFoodProduct()
     {
        $product = new Product('Un produit', Product::FOOD_PRODUCT, 20);
        $this->assertSame(1.1, $product->computeTVA());
     }
+    */
   
     /**
      * @group michael
